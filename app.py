@@ -3,6 +3,7 @@ import openai
 from docx import Document
 import io
 
+
 # OpenRouter API setup
 openai.api_key = "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"
 openai.api_base = "https://openrouter.ai/api/v1"
@@ -83,3 +84,4 @@ if st.button("Generate Resume"):
 
     else:
         st.error("Please fill required fields")
+
