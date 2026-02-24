@@ -1,6 +1,34 @@
 import streamlit as st
 from openai import OpenAI
+from docx import Document
+import io
+# -------------------------
+# DOCX RESUME CREATOR FUNCTION
+# -------------------------
+def create_docx_resume(resume_text, template):
 
+    doc = Document()
+
+    if template == "Modern":
+        doc.add_heading("RESUME", level=0)
+
+    elif template == "Professional":
+        doc.add_heading("Professional Resume", level=0)
+
+    elif template == "Minimal":
+        doc.add_heading("", level=0)
+
+    else:
+        doc.add_heading("Resume", level=0)
+
+    for line in resume_text.split("\n"):
+        doc.add_paragraph(line)
+
+    buffer = io.BytesIO()
+    doc.save(buffer)
+    buffer.seek(0)
+
+    return buffer
 # -----------------------------
 # CONFIGURATION
 # -----------------------------

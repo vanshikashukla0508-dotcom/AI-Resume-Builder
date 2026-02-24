@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+streamlit
+openai
+python-docx
+=======
+streamlit
+openai
+python-docx
+>>>>>>> 3be2b134292760260fe742bda819ced1504f0538
