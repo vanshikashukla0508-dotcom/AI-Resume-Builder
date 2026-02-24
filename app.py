@@ -36,7 +36,7 @@ def create_docx_resume(resume_text, template):
 from openai import OpenAI
 
 client = OpenAI(
-    api_key=st.secrets["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"]
+    api_key = st.secrets["OPENAI_API_KEY"]
 )
 
 MODEL_NAME = "mistralai/mistral-7b-instruct"
