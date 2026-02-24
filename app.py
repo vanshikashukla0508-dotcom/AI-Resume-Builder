@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from openai import OpenAI
 from docx import Document
 import io
@@ -32,9 +33,10 @@ def create_docx_resume(resume_text, template):
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
+from openai import OpenAI
+
 client = OpenAI(
-    api_key="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",
-    base_url="https://openrouter.ai/api/v1"
+    api_key=st.secrets["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"]
 )
 
 MODEL_NAME = "mistralai/mistral-7b-instruct"
