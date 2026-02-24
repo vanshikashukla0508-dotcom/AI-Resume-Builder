@@ -42,6 +42,7 @@ MODEL_NAME = "mistralai/mistral-7b-instruct"
 st.set_page_config(page_title="AI Resume Builder", layout="wide")
 
 st.title("🚀 AI Resume Builder Pro")
+st.caption("Created by Vanshika Shukla")
 st.write("Generate Professional, ATS-Optimized Resume with AI")
 
 # -----------------------------
@@ -267,3 +268,5 @@ def create_docx_resume(resume_text, template_style):
     buffer.seek(0)
 
     return buffer
+    st.markdown("---")
+    st.markdown("© 2026 Created by Vanshika Shukla")
