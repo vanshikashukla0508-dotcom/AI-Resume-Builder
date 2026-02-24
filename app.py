@@ -269,4 +269,7 @@ def create_docx_resume(resume_text, template_style):
 
     return buffer
     st.markdown("---")
-    st.markdown("© 2026 Created by Vanshika Shukla")
+    st.markdown(
+    "<center>© 2026 Created by <b>Vanshika Shukla</b> | AI Resume Builder Project</center>",
+    unsafe_allow_html=True
+)
