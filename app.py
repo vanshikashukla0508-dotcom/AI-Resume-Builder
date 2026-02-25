@@ -38,11 +38,11 @@ from openai import OpenAI
 
 # Initialize the OpenAI client correctly for a real OpenAI Key
 client = OpenAI(
-    api_key=st.secrets["OPENAI_API_KEY"]
+    base_url="https://api.groq.com/openai/v1",
+    api_key=st.secrets["GROQ_API_KEY"]
 )
 
-
-MODEL_NAME = "gpt-3.5-turbo"
+MODEL_NAME = "llama-3.3-70b-versatile"
 st.set_page_config(page_title="AI Resume Builder", layout="wide")
 
 st.title("🚀 AI Resume Builder Pro")
