@@ -33,15 +33,16 @@ def create_docx_resume(resume_text, template):
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
+import streamlit as st
 from openai import OpenAI
 
+# Initialize the OpenAI client correctly for a real OpenAI Key
 client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
     api_key=st.secrets["OPENAI_API_KEY"]
 )
 
-MODEL_NAME = "mistralai/mistral-7b-instruct"
 
+MODEL_NAME = "gpt-3.5-turbo"
 st.set_page_config(page_title="AI Resume Builder", layout="wide")
 
 st.title("🚀 AI Resume Builder Pro")
